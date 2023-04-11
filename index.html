@@ -25,73 +25,79 @@
       </div>
     </header>
     <main>
-      <section class="search-container">
-        <form action="">
-          <div>
+      <section>
+        <div class="search-container">
+          <div class="search-bar">
             <img src="./assets/icon-search.svg" alt="search" />
-            <input type="text" placeholder="Search GitHub username..." />
+            <input id="input-search" type="text" placeholder="Search GitHub username..." active />
           </div>
           <p hidden>No results</p>
-          <button type="submit">Search</button>
-        </form>
+          <button type="submit" id="btn-search">Search</button>
+        </div>
       </section>
-      <div>
+
+      <section>
         <div class="profile-container">
-          <div class="profile-header">
+          <div class="profile-img">
             <img src="./assets/octocat.png" alt="profile-img" />
-            <div>
-              <h2>The Octocat</h2>
-              <p>@octocat</p>
-              <p>Joined 25 Jan 2011</p>
-            </div>
-            <div>
-              <p>This profile has no bio</p>
-            </div>
           </div>
-
-          <div>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
-          </div>
-
-          <div class="profile-stats-wrapper">
-            <div class="profile-stats">
+          <div class="profile-content">
+            <div class="profile-header">
               <div>
-                <p>Repos</p>
-                <h2>8</h2>
+                <h2>The Octocat</h2>
+                <p id="username">@octocat</p>
               </div>
               <div>
-                <p>Followers</p>
-                <h2>3938</h2>
-              </div>
-              <div>
-                <p>Following</p>
-                <h2>9</h2>
+                <p>Joined 25 Jan 2011</p>
               </div>
             </div>
-          </div>
+            <div class="user-bio">
+              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              </p>
+            </div>
 
-          <div class="profile-bottom-wrapper">
-            <div class="profile-bottom">
-              <div>
-                <img src="./assets/icon-location.svg" alt="location" />
-                <p>San Francisco</p>
-              </div>
-              <div>
-                <img src="./assets/icon-website.svg" alt="website" />
-                <p>http://github.blog</p>
-              </div>
-              <div>
-                <img src="./assets/icon-twitter.svg" alt="twitter" />
-                <p>Not available</p>
-              </div>
-              <div>
-                <img src="./assets/icon-company.svg" alt="company" />
-                <p>@github</p>
-              </div>
 
+            <div class="profile-stats-wrapper">
+              <div class="profile-stats">
+                <div>
+                  <p>Repos</p>
+                  <h2>8</h2>
+                </div>
+                <div>
+                  <p>Followers</p>
+                  <h2>3938</h2>
+                </div>
+                <div>
+                  <p>Following</p>
+                  <h2>9</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="profile-bottom-wrapper">
+              <div class="profile-bottom">
+                <div>
+                  <img src="./assets/icon-location.svg" alt="location" />
+                  <p>San Francisco</p>
+                </div>
+                <div>
+                  <img src="./assets/icon-website.svg" alt="website" />
+                  <p>http://github.blog</p>
+                </div>
+                <div>
+                  <img src="./assets/icon-twitter.svg" alt="twitter" />
+                  <p>Not available</p>
+                </div>
+                <div>
+                  <img src="./assets/icon-company.svg" alt="company" />
+                  <p>@github</p>
+                </div>
+
+              </div>
             </div>
           </div>
-
+        </div>
+      </section>
     </main>
   </div>
   <script src="./js/script.js"></script>
