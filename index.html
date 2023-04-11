@@ -3,25 +3,25 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
-
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <title>Frontend Mentor | GitHub user search app</title>
-  <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
   <div class="container">
     <header class="header">
       <h1 id="logo">devfinder</h1>
-      <div id="btn-mode">
-        <p>dark</p>
-        <img src="./assets/icon-sun.svg" alt="sun" hidden />
-        <img src="./assets/icon-moon.svg" alt="moon" />
+      <div id="btn-mode" aria-label="mode-toggle">
+        <p id="mode-text">dark</p>
+        <img class="hidden" id="light-mode-icon" src="./assets/icon-sun.svg" alt="sun" />
+        <img id="dark-mode-icon" src="./assets/icon-moon.svg" alt="moon" />
       </div>
     </header>
     <main>
@@ -52,10 +52,10 @@
               </div>
             </div>
             <div class="user-bio">
-              <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
               </p>
             </div>
-
 
             <div class="profile-stats-wrapper">
               <div class="profile-stats">
@@ -92,7 +92,6 @@
                   <img src="./assets/icon-company.svg" alt="company" />
                   <p>@github</p>
                 </div>
-
               </div>
             </div>
           </div>
@@ -101,6 +100,7 @@
     </main>
   </div>
   <script src="./js/script.js"></script>
+  <script src="darkmode.js"></script>
 </body>
 
 </html>

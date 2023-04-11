@@ -1,11 +1,11 @@
 :root {
-  --lm-bg-f6f8ff: #f6f8ff;
+  --lm-bg: #f6f8ff;
   --lm-bg-wite: #fff;
-  --lm-fefefe: #fefefe;
-  --lm-text-4b6a9b: #4b6a9b;
-  --lm-text-697C9A: #697c9a;
+  --lm-bg-content: #fefefe;
+  --lm-text: #4b6a9b;
+  --lm-text-light: #697c9a;
   --lm-text-alt: #2b3442;
-  --lm-text-222731: #222731;
+  --lm-text-dark: #222731;
   --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
   --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
   --lm-icon-bg: brightness(100%);
@@ -14,6 +14,23 @@
   --btn-hover: #60abff;
   font-size: 62.5%;
 }
+
+.darkmode {
+  --lm-bg: #222731;
+  --lm-bg-wite: #fff;
+  --lm-bg-content: #2b3442;
+  --lm-text: #a8b2d1;
+  --lm-text-light: #697c9a;
+  --lm-text-alt: #f6f8ff;
+  --lm-text-dark: #f6f8ff;
+  --lm-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+  --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+  --lm-icon-bg: brightness(0%);
+  /* Btn */
+  --btn: #0079ff;
+  --btn-hover: #60abff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,14 +38,18 @@
   font-family: "Space Mono", monospace;
 }
 body {
-  background-color: var(--lm-bg-f6f8ff);
+  background-color: var(--lm-bg);
   font-size: 15px;
   line-height: 26px;
-  color: var(--lm-text-4b6a9b);
+  color: var(--lm-text);
   width: 100%;
   position: relative;
   height: 100vh;
   font-size: 1.5rem;
+}
+
+.hidden {
+  display: none;
 }
 
 h1,
@@ -65,7 +86,7 @@ h4 {
 
 #logo {
   font-size: 2.6rem;
-  color: var(--lm-text-222731);
+  color: var(--lm-text-dark);
 }
 
 #btn-mode {
@@ -74,6 +95,7 @@ h4 {
   justify-content: center;
   flex-direction: row;
   gap: 1rem;
+  cursor: pointer;
 }
 
 #btn-mode p {
@@ -88,11 +110,11 @@ h4 {
 .search-container {
   display: flex;
   flex-direction: row;
-  gap: 1;
+  gap: 1rem;
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: var(--lm-fefefe);
+  background-color: var(--lm-bg-content);
   padding: 10px;
   border-radius: 15px;
   box-shadow: var(--lm-shadow);
@@ -112,11 +134,11 @@ h4 {
   outline: none;
   font-size: 1.5rem;
   line-height: 1.6rem;
-  color: var(--lm-text-4b6a9b);
+  color: var(--lm-text);
 }
 
 #input-search::placeholder {
-  color: var(--lm-text-222731);
+  color: var(--lm-text-dark);
 }
 
 #btn-search {
@@ -140,7 +162,7 @@ h4 {
 }
 
 .profile-container {
-  background-color: var(--lm-fefefe);
+  background-color: var(--lm-bg-content);
   width: 100%;
   margin-top: 24px;
   padding: 4.4rem 4.4rem;
@@ -188,7 +210,7 @@ h4 {
 .profile-header p {
   font-size: 1.5rem;
   line-height: 1.9rem;
-  color: var(--lm-text-697C9A);
+  color: var(--lm-text-light);
 }
 
 #username {
@@ -200,7 +222,9 @@ h4 {
 .user-bio {
   font-size: 1.5rem;
   line-height: 2.5rem;
-  color: var(--lm-text-4b6a9b);
+  color: var(--lm-text);
   margin-top: 2rem;
   opacity: 0.75;
+  word-break: break-word;
+  overflow: hidden;
 }
