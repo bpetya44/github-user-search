@@ -1,14 +1,14 @@
 :root {
-  --lm-bg: #f6f8ff;
-  --lm-bg-wite: #fff;
-  --lm-bg-content: #fefefe;
-  --lm-text: #4b6a9b;
-  --lm-text-light: #697c9a;
-  --lm-text-alt: #2b3442;
-  --lm-text-dark: #222731;
-  --lm-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
-  --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
-  --lm-icon-bg: brightness(100%);
+  --bg: #f6f8ff;
+  --bg-wite: #fff;
+  --bg-content: #fefefe;
+  --text: #4b6a9b;
+  --text-light: #697c9a;
+  --text-alt: #2b3442;
+  --text-dark: #222731;
+  --shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.2);
+  --shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+  --icon-bg: brightness(100%);
   /* Btn */
   --btn: #0079ff;
   --btn-hover: #60abff;
@@ -16,16 +16,16 @@
 }
 
 .darkmode {
-  --lm-bg: #222731;
-  --lm-bg-wite: #fff;
-  --lm-bg-content: #2b3442;
-  --lm-text: #a8b2d1;
-  --lm-text-light: #697c9a;
-  --lm-text-alt: #f6f8ff;
-  --lm-text-dark: #f6f8ff;
-  --lm-shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
-  --lm-shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
-  --lm-icon-bg: brightness(0%);
+  --bg: #222731;
+  --bg-wite: #fff;
+  --bg-content: #2b3442;
+  --text: #a8b2d1;
+  --text-light: #697c9a;
+  --text-alt: #f6f8ff;
+  --text-dark: #f6f8ff;
+  --shadow: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+  --shadow-inactive: 0px 16px 30px -10px rgba(0, 0, 0, 0.2);
+  --icon-bg: brightness(0%);
   /* Btn */
   --btn: #0079ff;
   --btn-hover: #60abff;
@@ -38,14 +38,15 @@
   font-family: "Space Mono", monospace;
 }
 body {
-  background-color: var(--lm-bg);
+  background-color: var(--bg);
   font-size: 15px;
   line-height: 26px;
-  color: var(--lm-text);
+  color: var(--text);
   width: 100%;
   position: relative;
   height: 100vh;
   font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
 .hidden {
@@ -86,7 +87,7 @@ h4 {
 
 #logo {
   font-size: 2.6rem;
-  color: var(--lm-text-dark);
+  color: var(--text-dark);
 }
 
 #btn-mode {
@@ -114,10 +115,10 @@ h4 {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-color: var(--lm-bg-content);
+  background-color: var(--bg-content);
   padding: 10px;
   border-radius: 15px;
-  box-shadow: var(--lm-shadow);
+  box-shadow: var(--shadow);
 }
 
 .search-bar {
@@ -132,29 +133,28 @@ h4 {
   height: 100%;
   border: none;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   line-height: 1.6rem;
-  color: var(--lm-text);
+  color: var(--text);
 }
 
 #input-search::placeholder {
-  color: var(--lm-text-dark);
+  color: var(--text-dark);
 }
 
 #btn-search {
   border: none;
   outline: none;
   background-color: var(--btn);
-  color: var(--lm-bg-wite);
-  font-size: 1.5rem;
+  color: var(--bg-wite);
+  font-size: 1.6rem;
   line-height: 1.2rem;
   font-weight: 700;
   text-transform: capitalize;
-  letter-spacing: 2.5px;
-  border-radius: 15px;
+  letter-spacing: 0;
+  border-radius: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 14px 24px;
+  padding: 18px 24px;
 }
 
 #btn-search:hover {
@@ -162,12 +162,12 @@ h4 {
 }
 
 .profile-container {
-  background-color: var(--lm-bg-content);
+  background-color: var(--bg-content);
   width: 100%;
   margin-top: 24px;
   padding: 4.4rem 4.4rem;
   border-radius: 15px;
-  box-shadow: var(--lm-shadow);
+  box-shadow: var(--shadow);
   display: flex;
   gap: 3.7rem;
 }
@@ -204,13 +204,13 @@ h4 {
 .profile-header h2 {
   font-size: 2.6rem;
   line-height: 3.9rem;
-  color: var(--lm-text-2b3442);
+  color: var(--text-alt);
 }
 
 .profile-header p {
   font-size: 1.5rem;
   line-height: 1.9rem;
-  color: var(--lm-text-light);
+  color: var(--text-light);
 }
 
 #username {
@@ -222,9 +222,59 @@ h4 {
 .user-bio {
   font-size: 1.5rem;
   line-height: 2.5rem;
-  color: var(--lm-text);
+  color: var(--text);
   margin-top: 2rem;
   opacity: 0.75;
   word-break: break-word;
   overflow: hidden;
+}
+
+.profile-stats-wrapper {
+  width: 100%;
+  background-color: var(--bg);
+  margin-top: 3.2rem;
+  border-radius: 10px;
+}
+
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0;
+}
+
+.profile-stats p {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+  color: var(--text);
+}
+
+.profile-stats h2 {
+  font-size: 2.2rem;
+  line-height: 3.3rem;
+  color: var(--text-alt);
+}
+
+.profile-footer-wrapper {
+  margin-top: 3.7rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.profile-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.profile-footer-content {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.profile-footer-content:nth-child(1) {
+  margin-bottom: 2rem;
 }
