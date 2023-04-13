@@ -62,6 +62,10 @@ h3,
 h4 {
   font-weight: 400;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .container {
   width: 730px;
@@ -126,6 +130,7 @@ h4 {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  margin-left: 2.2rem;
 }
 
 #input-search {
@@ -136,10 +141,7 @@ h4 {
   font-size: 1.8rem;
   line-height: 1.6rem;
   color: var(--text);
-}
-
-#input-search::placeholder {
-  color: var(--text-dark);
+  background-color: inherit;
 }
 
 #btn-search {
@@ -172,7 +174,7 @@ h4 {
   gap: 3.7rem;
 }
 
-.profile-img {
+.user-img {
   width: 100%;
   max-width: 117px;
   height: auto;
@@ -181,7 +183,7 @@ h4 {
   overflow: hidden;
 }
 
-.profile-img img {
+#user-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -201,19 +203,19 @@ h4 {
   width: 100%;
 }
 
-.profile-header h2 {
+#user-name {
   font-size: 2.6rem;
   line-height: 3.9rem;
   color: var(--text-alt);
 }
 
-.profile-header p {
+#login {
   font-size: 1.5rem;
   line-height: 1.9rem;
-  color: var(--text-light);
+  text-decoration: none;
 }
 
-#username {
+#login {
   font-size: 1.6rem;
   line-height: 2.4rem;
   color: var(--btn);
@@ -271,10 +273,18 @@ h4 {
 
 .profile-footer-content {
   display: flex;
-  gap: 1.6rem;
+  gap: 1.5rem;
   align-items: center;
 }
 
 .profile-footer-content:nth-child(1) {
   margin-bottom: 2rem;
+}
+
+.error {
+  position: absolute;
+  font-weight: 700;
+  line-height: 2.2rem;
+  color: #f74646;
+  transform: translateX(500%);
 }

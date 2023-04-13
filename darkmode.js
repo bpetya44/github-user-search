@@ -29,7 +29,7 @@ function disableDarkMode() {
   localStorage.setItem("darkMode", null);
 }
 
-// On Load of the page, check if the user already has darkMode
+// On Load check if the user already has darkMode
 if (darkMode === "enabled") {
   enableDarkMode();
 }

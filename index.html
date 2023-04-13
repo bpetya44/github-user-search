@@ -29,31 +29,32 @@
         <div class="search-container">
           <div class="search-bar">
             <img src="./assets/icon-search.svg" alt="search" />
-            <input id="input-search" type="text" placeholder="Search GitHub username..." active />
+            <input id="input-search" type="text" placeholder="Search GitHub username..." required />
+            <p class="error"></p>
           </div>
-          <p class="hidden">No results</p>
+
           <button type="submit" id="btn-search">Search</button>
         </div>
       </section>
 
       <section>
         <div class="profile-container">
-          <div class="profile-img">
-            <img src="./assets/octocat.png" alt="profile-img" />
+          <div class="user-img">
+            <img id="user-image" src="./assets/octocat.png" alt="user image" />
           </div>
           <div class="profile-content">
             <div class="profile-header">
               <div>
-                <h2>The Octocat</h2>
-                <p id="username">@octocat</p>
+                <h2 id="user-name">The Octocat</h2>
+                <a id="login" href="https://github.com/octocat">@octocat</a>
               </div>
               <div>
-                <p>Joined 25 Jan 2011</p>
+                <p id="joined">Joined 25 Jan 2011</p>
               </div>
             </div>
             <div class="user-bio">
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+              <p id="user-bio">
+                This profile has no bio.
               </p>
             </div>
 
@@ -61,15 +62,15 @@
               <div class="profile-stats">
                 <div>
                   <p>Repos</p>
-                  <h2>8</h2>
+                  <h2 id="user-repos">8</h2>
                 </div>
                 <div>
                   <p>Followers</p>
-                  <h2>3938</h2>
+                  <h2 id="user-followers">3938</h2>
                 </div>
                 <div>
                   <p>Following</p>
-                  <h2>9</h2>
+                  <h2 id="user-following">9</h2>
                 </div>
               </div>
             </div>
@@ -79,17 +80,17 @@
                 <div>
                   <div class="profile-footer-content">
                     <img src="./assets/icon-location.svg" alt="location" />
-                    <p>San Francisco</p>
+                    <p id="user-location">San Francisco</p>
                   </div>
                   <div class="profile-footer-content">
                     <img src="./assets/icon-website.svg" alt="website" />
-                    <p>http://github.blog</p>
+                    <a id="user-blog" href="">http://github.blog </a>
                   </div>
                 </div>
                 <div>
                   <div class="profile-footer-content">
                     <img src="./assets/icon-twitter.svg" alt="twitter" />
-                    <p>Not available</p>
+                    <p id="user-twitter">Not available</p>
                   </div>
                   <div class="profile-footer-content">
                     <img src="./assets/icon-company.svg" alt="company" />
@@ -103,7 +104,7 @@
       </section>
     </main>
   </div>
-  <script src="./js/script.js"></script>
+  <script type="text/javascript" src="app.js"></script>
   <script src="darkmode.js"></script>
 </body>
 
