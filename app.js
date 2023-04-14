@@ -63,8 +63,6 @@ function getUser() {
         document.getElementById("user-blog").innerHTML =
           data.blog || "Not available";
         document.getElementById("user-blog").href = data.blog;
-
-        // document.getElementById("user-url").innerHTML = data.html_url;
       }
     })
     .catch((err) => {
